@@ -1,64 +1,5 @@
 <div class="min-h-screen bg-[var(--app-page-background)] text-[var(--app-text)]">
-  <header
-    class="fixed inset-x-0 top-0 z-50 transition-all duration-300"
-    [class.border-b]="isScrolled()"
-    [class.border-[var(--app-border)]]="isScrolled()"
-    [class.bg-[color:var(--app-shell-glass)]]="isScrolled()"
-    [class.backdrop-blur-xl]="isScrolled()"
-  >
-    <div class="mx-auto flex max-w-[var(--app-page-max-width)] items-center justify-between px-5 py-4 sm:px-6 lg:px-8">
-      <a href="#inicio" class="flex items-center gap-3 text-sm font-semibold uppercase tracking-[0.18em] text-[var(--app-heading)]">
-        <span class="grid h-11 w-11 place-items-center rounded-2xl bg-[var(--app-accent-soft)] text-[var(--app-accent-strong)] shadow-[var(--app-soft-shadow)]">
-          JL
-        </span>
-        <span class="hidden sm:block">Jesús Lobato</span>
-      </a>
-
-      <nav class="hidden items-center gap-8 md:flex">
-        <a class="text-sm font-medium text-[var(--app-text-soft)] transition hover:text-[var(--app-heading)]" href="#sobre-mi">Sobre mí</a>
-        <a class="text-sm font-medium text-[var(--app-text-soft)] transition hover:text-[var(--app-heading)]" href="#experiencia">Experiencia</a>
-        <a class="text-sm font-medium text-[var(--app-text-soft)] transition hover:text-[var(--app-heading)]" href="#proyectos">Proyectos</a>
-        <a class="text-sm font-medium text-[var(--app-text-soft)] transition hover:text-[var(--app-heading)]" href="#tecnologias">Tecnologías</a>
-        <a class="text-sm font-medium text-[var(--app-text-soft)] transition hover:text-[var(--app-heading)]" href="#formacion">Formación</a>
-        <a class="text-sm font-medium text-[var(--app-text-soft)] transition hover:text-[var(--app-heading)]" href="#contacto">Contacto</a>
-      </nav>
-
-      <div class="hidden items-center gap-3 md:flex">
-        <a
-          pButton
-          href="#contacto"
-          label="Contactar"
-          icon="pi pi-arrow-up-right"
-          iconPos="right"
-          severity="contrast"
-          [rounded]="true"
-        ></a>
-      </div>
-
-      <button
-        type="button"
-        class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-[var(--app-border)] bg-white text-[var(--app-heading)] md:hidden"
-        (click)="toggleMenu()"
-        [attr.aria-expanded]="menuOpen()"
-        aria-label="Abrir navegación"
-      >
-        <i class="pi text-base" [class.pi-bars]="!menuOpen()" [class.pi-times]="menuOpen()"></i>
-      </button>
-    </div>
-
-    @if (menuOpen()) {
-      <div class="border-t border-[var(--app-border)] bg-[var(--app-page-background)] px-5 py-4 md:hidden">
-        <nav class="mx-auto flex max-w-[var(--app-page-max-width)] flex-col gap-2">
-          <a class="rounded-2xl px-4 py-3 text-sm font-medium text-[var(--app-text-soft)] transition hover:bg-[var(--app-accent-muted)] hover:text-[var(--app-heading)]" href="#sobre-mi" (click)="closeMenu()">Sobre mí</a>
-          <a class="rounded-2xl px-4 py-3 text-sm font-medium text-[var(--app-text-soft)] transition hover:bg-[var(--app-accent-muted)] hover:text-[var(--app-heading)]" href="#experiencia" (click)="closeMenu()">Experiencia</a>
-          <a class="rounded-2xl px-4 py-3 text-sm font-medium text-[var(--app-text-soft)] transition hover:bg-[var(--app-accent-muted)] hover:text-[var(--app-heading)]" href="#proyectos" (click)="closeMenu()">Proyectos</a>
-          <a class="rounded-2xl px-4 py-3 text-sm font-medium text-[var(--app-text-soft)] transition hover:bg-[var(--app-accent-muted)] hover:text-[var(--app-heading)]" href="#tecnologias" (click)="closeMenu()">Tecnologías</a>
-          <a class="rounded-2xl px-4 py-3 text-sm font-medium text-[var(--app-text-soft)] transition hover:bg-[var(--app-accent-muted)] hover:text-[var(--app-heading)]" href="#formacion" (click)="closeMenu()">Formación</a>
-          <a class="rounded-2xl px-4 py-3 text-sm font-medium text-[var(--app-text-soft)] transition hover:bg-[var(--app-accent-muted)] hover:text-[var(--app-heading)]" href="#contacto" (click)="closeMenu()">Contacto</a>
-        </nav>
-      </div>
-    }
-  </header>
+  <app-navbar></app-navbar>
 
   <main>
     <section id="inicio" class="relative overflow-hidden px-5 pb-20 pt-32 sm:px-6 md:pt-40 lg:px-8">
@@ -543,10 +484,5 @@
     </section>
   </main>
 
-  <footer class="border-t border-[var(--app-border)] px-5 py-8 sm:px-6 lg:px-8">
-    <div class="mx-auto flex max-w-[var(--app-page-max-width)] flex-col items-center justify-between gap-3 text-sm text-[var(--app-text-muted)] sm:flex-row">
-      <p>© {{ currentYear }} Jesús Lobato González</p>
-      <p>Diseñado y desarrollado con Angular, PrimeNG y Tailwind CSS.</p>
-    </div>
-  </footer>
+  <app-footer></app-footer>
 </div>

@@ -1,0 +1,30 @@
+@import 'primeicons/primeicons.css';
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--app-font-body);
+  background:
+    radial-gradient(circle at top left, rgba(255, 140, 107, 0.12), transparent 34%),
+    linear-gradient(180deg, #fffaf7 0%, #fff8f4 40%, #fff6f1 100%);
+  color: var(--app-text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--app-font-display);
+}

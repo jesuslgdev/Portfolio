@@ -1,0 +1,24 @@
+:root {
+  color-scheme: light;
+  --app-page-max-width: 76rem;
+  --app-page-background: #fff8f4;
+  --app-shell-glass: rgba(255, 248, 244, 0.82);
+  --app-panel: rgba(255, 255, 255, 0.9);
+  --app-heading: #251c17;
+  --app-text: #40332d;
+  --app-text-soft: #6b5a52;
+  --app-text-muted: #968279;
+  --app-accent: #ff5a3d;
+  --app-accent-strong: #d8432a;
+  --app-accent-soft: #ffe7e0;
+  --app-accent-muted: #fff1eb;
+  --app-accent-fade: rgba(255, 90, 61, 0.05);
+  --app-border: #eadfd8;
+  --app-border-strong: #ddcbc1;
+  --app-soft-shadow: 0 12px 30px rgba(155, 89, 65, 0.08);
+  --app-card-shadow: 0 24px 60px rgba(155, 89, 65, 0.12);
+  --app-radius-xl: 2rem;
+  --app-radius-lg: 1.5rem;
+  --app-font-display: 'Circular', 'Avenir Next', 'Segoe UI', sans-serif;
+  --app-font-body: Inter, 'Segoe UI', sans-serif;
+}

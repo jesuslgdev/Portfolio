@@ -7,13 +7,13 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
     <div class="max-w-3xl">
       <div class="ds-section-kicker">
         <span>{{ index() }}</span>
-        <span class="hidden h-px w-12 bg-[var(--app-border-strong)] sm:block"></span>
+        <span class="hidden h-px w-12 bg-app-border-strong sm:block"></span>
       </div>
-      <h2 class="mt-4 text-3xl font-semibold tracking-tight text-[var(--app-heading)] sm:text-4xl">
+      <h2 class="mt-4 text-3xl font-semibold tracking-tight text-app-heading sm:text-4xl">
         {{ title() }}
       </h2>
       @if (description()) {
-        <p class="mt-4 text-base leading-7 text-[var(--app-text-soft)] sm:text-lg">
+        <p class="mt-4 text-base leading-7 text-app-text-soft sm:text-lg">
           {{ description() }}
         </p>
       }

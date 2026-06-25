@@ -30,28 +30,28 @@ export class HomePageComponent {
   protected bookHealthActiveIndex = 0;
 
   protected readonly erpImages: GalleryImage[] = [
-    { itemImageSrc: '/projects/erp/login_erp.png', thumbnailImageSrc: '/projects/erp/login_erp.png', alt: 'Pantalla de login del ERP' },
-    { itemImageSrc: '/projects/erp/dashboard_erp.png', thumbnailImageSrc: '/projects/erp/dashboard_erp.png', alt: 'Dashboard principal del ERP' },
-    { itemImageSrc: '/projects/erp/clientes_erp.png', thumbnailImageSrc: '/projects/erp/clientes_erp.png', alt: 'Modulo de clientes' },
-    { itemImageSrc: '/projects/erp/productos_erp.png', thumbnailImageSrc: '/projects/erp/productos_erp.png', alt: 'Modulo de productos' },
-    { itemImageSrc: '/projects/erp/ventas_erp.png', thumbnailImageSrc: '/projects/erp/ventas_erp.png', alt: 'Modulo de ventas' },
-    { itemImageSrc: '/projects/erp/usuarios_erp.png', thumbnailImageSrc: '/projects/erp/usuarios_erp.png', alt: 'Modulo de usuarios' },
+    { itemImageSrc: 'projects/erp/login_erp.png', thumbnailImageSrc: 'projects/erp/login_erp.png', alt: 'Pantalla de login del ERP' },
+    { itemImageSrc: 'projects/erp/dashboard_erp.png', thumbnailImageSrc: 'projects/erp/dashboard_erp.png', alt: 'Dashboard principal del ERP' },
+    { itemImageSrc: 'projects/erp/clientes_erp.png', thumbnailImageSrc: 'projects/erp/clientes_erp.png', alt: 'Modulo de clientes' },
+    { itemImageSrc: 'projects/erp/productos_erp.png', thumbnailImageSrc: 'projects/erp/productos_erp.png', alt: 'Modulo de productos' },
+    { itemImageSrc: 'projects/erp/ventas_erp.png', thumbnailImageSrc: 'projects/erp/ventas_erp.png', alt: 'Modulo de ventas' },
+    { itemImageSrc: 'projects/erp/usuarios_erp.png', thumbnailImageSrc: 'projects/erp/usuarios_erp.png', alt: 'Modulo de usuarios' },
   ];
 
   protected readonly bookHealthWebImages: GalleryImage[] = [
-    { itemImageSrc: '/projects/bookhealth/web/home_bookhealth_web.png', thumbnailImageSrc: '/projects/bookhealth/web/home_bookhealth_web.png', alt: 'Home de BookHealth web' },
-    { itemImageSrc: '/projects/bookhealth/web/lista_profesionales_bookhealth_web.png', thumbnailImageSrc: '/projects/bookhealth/web/lista_profesionales_bookhealth_web.png', alt: 'Listado de profesionales en BookHealth web' },
-    { itemImageSrc: '/projects/bookhealth/web/detalle_profesional_bookhealth_web.png', thumbnailImageSrc: '/projects/bookhealth/web/detalle_profesional_bookhealth_web.png', alt: 'Detalle de profesional en BookHealth web' },
-    { itemImageSrc: '/projects/bookhealth/web/citas_cliente_bookhealth_web.png', thumbnailImageSrc: '/projects/bookhealth/web/citas_cliente_bookhealth_web.png', alt: 'Citas del cliente en BookHealth web' },
-    { itemImageSrc: '/projects/bookhealth/web/dashboard_profesionales_bookhealth_web.png', thumbnailImageSrc: '/projects/bookhealth/web/dashboard_profesionales_bookhealth_web.png', alt: 'Dashboard de profesionales en BookHealth web' },
+    { itemImageSrc: 'projects/bookhealth/web/home_bookhealth_web.png', thumbnailImageSrc: 'projects/bookhealth/web/home_bookhealth_web.png', alt: 'Home de BookHealth web' },
+    { itemImageSrc: 'projects/bookhealth/web/lista_profesionales_bookhealth_web.png', thumbnailImageSrc: 'projects/bookhealth/web/lista_profesionales_bookhealth_web.png', alt: 'Listado de profesionales en BookHealth web' },
+    { itemImageSrc: 'projects/bookhealth/web/detalle_profesional_bookhealth_web.png', thumbnailImageSrc: 'projects/bookhealth/web/detalle_profesional_bookhealth_web.png', alt: 'Detalle de profesional en BookHealth web' },
+    { itemImageSrc: 'projects/bookhealth/web/citas_cliente_bookhealth_web.png', thumbnailImageSrc: 'projects/bookhealth/web/citas_cliente_bookhealth_web.png', alt: 'Citas del cliente en BookHealth web' },
+    { itemImageSrc: 'projects/bookhealth/web/dashboard_profesionales_bookhealth_web.png', thumbnailImageSrc: 'projects/bookhealth/web/dashboard_profesionales_bookhealth_web.png', alt: 'Dashboard de profesionales en BookHealth web' },
   ];
 
   protected readonly bookHealthAndroidImages: GalleryImage[] = [
-    { itemImageSrc: '/projects/bookhealth/android/home_android.jpg', thumbnailImageSrc: '/projects/bookhealth/android/home_android.jpg', alt: 'Home de BookHealth Android' },
-    { itemImageSrc: '/projects/bookhealth/android/lista_profesionales_android.jpg', thumbnailImageSrc: '/projects/bookhealth/android/lista_profesionales_android.jpg', alt: 'Listado de profesionales en BookHealth Android' },
-    { itemImageSrc: '/projects/bookhealth/android/detalle_profesional_android.jpg', thumbnailImageSrc: '/projects/bookhealth/android/detalle_profesional_android.jpg', alt: 'Detalle de profesional en BookHealth Android' },
-    { itemImageSrc: '/projects/bookhealth/android/mapa_android.jpg', thumbnailImageSrc: '/projects/bookhealth/android/mapa_android.jpg', alt: 'Mapa de profesionales en BookHealth Android' },
-    { itemImageSrc: '/projects/bookhealth/android/mis_citas_android.jpg', thumbnailImageSrc: '/projects/bookhealth/android/mis_citas_android.jpg', alt: 'Mis citas en BookHealth Android' },
+    { itemImageSrc: 'projects/bookhealth/android/home_android.jpg', thumbnailImageSrc: 'projects/bookhealth/android/home_android.jpg', alt: 'Home de BookHealth Android' },
+    { itemImageSrc: 'projects/bookhealth/android/lista_profesionales_android.jpg', thumbnailImageSrc: 'projects/bookhealth/android/lista_profesionales_android.jpg', alt: 'Listado de profesionales en BookHealth Android' },
+    { itemImageSrc: 'projects/bookhealth/android/detalle_profesional_android.jpg', thumbnailImageSrc: 'projects/bookhealth/android/detalle_profesional_android.jpg', alt: 'Detalle de profesional en BookHealth Android' },
+    { itemImageSrc: 'projects/bookhealth/android/mapa_android.jpg', thumbnailImageSrc: 'projects/bookhealth/android/mapa_android.jpg', alt: 'Mapa de profesionales en BookHealth Android' },
+    { itemImageSrc: 'projects/bookhealth/android/mis_citas_android.jpg', thumbnailImageSrc: 'projects/bookhealth/android/mis_citas_android.jpg', alt: 'Mis citas en BookHealth Android' },
   ];
 
   protected readonly galleryResponsiveOptions = [

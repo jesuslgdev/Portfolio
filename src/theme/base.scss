@@ -28,3 +28,37 @@ h3,
 h4 {
   font-family: var(--font-app-display);
 }
+
+/* ── Button severity fixes ── */
+.p-button-outlined.p-button-secondary {
+  color: var(--color-app-text) !important;
+  border-color: var(--color-app-border-strong) !important;
+}
+
+.p-button-outlined.p-button-secondary:hover {
+  background: #ffdcc7 !important;
+}
+
+.p-button-outlined:hover {
+  background: #ffdcc7 !important;
+}
+
+.p-button-text:hover {
+  background: #ffdcc7 !important;
+}
+
+.p-button-text.p-button-secondary {
+  color: var(--color-app-text) !important;
+}
+
+.p-button-text.p-button-secondary:hover {
+  background: #ffdcc7 !important;
+  color: var(--color-app-text) !important;
+}
+
+/* ── Platform toggle (BookHealth) ── */
+.platform-toggle-group .p-button-secondary:hover {
+  background: #2b221f !important;
+  color: #fff !important;
+  border-color: #2b221f !important;
+}

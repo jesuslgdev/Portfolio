@@ -32,14 +32,14 @@
           <div class="mt-10 flex flex-wrap gap-3">
             <a pButton href="#proyectos" label="Ver proyectos" icon="pi pi-arrow-down" iconPos="right" severity="contrast" [rounded]="true"></a>
             <a pButton href="#contacto" label="Contactar" icon="pi pi-send" iconPos="right" severity="secondary" [outlined]="true" [rounded]="true"></a>
-            <a pButton href="https://github.com/jesuslgdev" label="GitHub" icon="pi pi-github" iconPos="right" [text]="true" [rounded]="true" target="_blank" rel="noopener noreferrer"></a>
-            <a pButton href="https://www.linkedin.com/in/jes%C3%BAs-lobato-gonz%C3%A1lez-528345332/" label="LinkedIn" icon="pi pi-linkedin" iconPos="right" [text]="true" [rounded]="true" target="_blank" rel="noopener noreferrer"></a>
+            <a pButton href="https://github.com/jesuslgdev" label="GitHub" icon="pi pi-github" iconPos="right" [outlined]="true" [rounded]="true" target="_blank" rel="noopener noreferrer"></a>
+            <a pButton href="https://www.linkedin.com/in/jes%C3%BAs-lobato-gonz%C3%A1lez-528345332/" label="LinkedIn" icon="pi pi-linkedin" iconPos="right" [outlined]="true" [rounded]="true" target="_blank" rel="noopener noreferrer"></a>
           </div>
         </div>
 
         <aside class="w-[22rem] shrink-0">
           <img
-            src="/foto_perfil.jpg"
+            src="foto_perfil.jpg"
             alt="Jesús Lobato"
             class="h-auto w-full rounded-[2rem] border border-app-border shadow-app-lg"
           />
@@ -294,14 +294,13 @@
               </p>
 
               <div class="mt-5 flex flex-wrap items-center gap-3">
-                <div class="inline-flex rounded-full border border-app-border bg-white/80 p-1 shadow-app-sm">
+                <div class="platform-toggle-group inline-flex rounded-full border border-app-border bg-white/80 p-1 shadow-app-sm">
                   <button
                     pButton
                     type="button"
                     label="Web"
                     icon="pi pi-desktop"
                     [rounded]="true"
-                    [text]="bookHealthPlatform !== 'web'"
                     [severity]="bookHealthPlatform === 'web' ? 'contrast' : 'secondary'"
                     (click)="setBookHealthPlatform('web')"
                   ></button>
@@ -311,7 +310,6 @@
                     label="Android"
                     icon="pi pi-mobile"
                     [rounded]="true"
-                    [text]="bookHealthPlatform !== 'android'"
                     [severity]="bookHealthPlatform === 'android' ? 'contrast' : 'secondary'"
                     (click)="setBookHealthPlatform('android')"
                   ></button>

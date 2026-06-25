@@ -74,4 +74,30 @@ export const PortfolioPreset = definePreset(Aura, {
       shadow: 'none',
     },
   },
+  components: {
+    button: {
+      colorScheme: {
+        light: {
+          outlined: {
+            secondary: {
+              color: '{surface.800}',
+              borderColor: '{surface.600}',
+              hoverBackground: '{surface.100}',
+              activeBackground: '{surface.200}',
+            },
+          },
+          text: {
+            primary: {
+              hoverBackground: '{primary.100}',
+            },
+            secondary: {
+              color: '{surface.800}',
+              hoverBackground: '{surface.100}',
+              activeBackground: '{surface.200}',
+            },
+          },
+        },
+      },
+    },
+  },
 });

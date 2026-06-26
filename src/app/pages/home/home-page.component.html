@@ -9,38 +9,38 @@
         <div class="min-w-0 flex-1">
           <div class="inline-flex items-center gap-2 rounded-full border border-app-border-strong bg-white/85 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-app-accent-strong shadow-app-sm">
             <span class="h-2 w-2 rounded-full bg-app-accent"></span>
-            Disponible para nuevas oportunidades
+            {{ 'translations.hero.availability' | translate }}
           </div>
 
           <h1 class="mt-7 max-w-4xl text-5xl font-semibold tracking-[-0.05em] text-app-heading sm:text-6xl lg:text-7xl">
-            Jesús Lobato González
+            {{ 'translations.hero.name' | translate }}
           </h1>
 
           <p class="mt-5 text-lg font-medium text-app-accent-strong sm:text-xl">
-            Desarrollador de software con foco en Angular, PrimeNG y Android.
+            {{ 'translations.hero.subtitle' | translate }}
           </p>
 
           <p class="mt-6 max-w-3xl text-lg leading-8 text-app-text-soft">
-            Construyo interfaces modernas, limpias y mantenibles. Me gusta trabajar con una base sólida de diseño y código bien estructurado, cuidando tanto la experiencia visual como la claridad técnica del producto.
+            {{ 'translations.hero.description' | translate }}
           </p>
 
           <div class="mt-6 flex items-center gap-3 text-sm text-app-text-soft">
             <i class="pi pi-map-marker text-app-accent-strong"></i>
-            <span>Arahal, Sevilla · España</span>
+            <span>{{ 'translations.hero.location' | translate }}</span>
           </div>
 
           <div class="mt-10 flex flex-wrap gap-3">
-            <a pButton href="#proyectos" label="Ver proyectos" icon="pi pi-arrow-down" iconPos="right" severity="contrast" [rounded]="true"></a>
-            <a pButton href="#contacto" label="Contactar" icon="pi pi-send" iconPos="right" severity="secondary" [outlined]="true" [rounded]="true"></a>
-            <a pButton href="https://github.com/jesuslgdev" label="GitHub" icon="pi pi-github" iconPos="right" [outlined]="true" [rounded]="true" target="_blank" rel="noopener noreferrer"></a>
-            <a pButton href="https://www.linkedin.com/in/jes%C3%BAs-lobato-gonz%C3%A1lez-528345332/" label="LinkedIn" icon="pi pi-linkedin" iconPos="right" [outlined]="true" [rounded]="true" target="_blank" rel="noopener noreferrer"></a>
+            <a pButton href="#proyectos" [label]="'translations.hero.cta_projects' | translate" icon="pi pi-arrow-down" iconPos="right" severity="contrast" [rounded]="true"></a>
+            <a pButton href="#contacto" [label]="'translations.hero.cta_contact' | translate" icon="pi pi-send" iconPos="right" severity="secondary" [outlined]="true" [rounded]="true"></a>
+            <a pButton href="https://github.com/jesuslgdev" [label]="'translations.common.github' | translate" icon="pi pi-github" iconPos="right" [outlined]="true" [rounded]="true" target="_blank" rel="noopener noreferrer"></a>
+            <a pButton href="https://www.linkedin.com/in/jes%C3%BAs-lobato-gonz%C3%A1lez-528345332/" [label]="'translations.common.linkedin' | translate" icon="pi pi-linkedin" iconPos="right" [outlined]="true" [rounded]="true" target="_blank" rel="noopener noreferrer"></a>
           </div>
         </div>
 
         <aside class="w-[22rem] shrink-0">
           <img
             src="foto_perfil.jpg"
-            alt="Jesús Lobato"
+            [alt]="'translations.hero.profile_alt' | translate"
             class="h-auto w-full rounded-[2rem] border border-app-border shadow-app-lg"
           />
         </aside>
@@ -49,16 +49,12 @@
 
     <section id="sobre-mi" class="ds-section-shell">
       <div class="ds-section-grid">
-        <app-section-heading index="01" title="Sobre mí"></app-section-heading>
+        <app-section-heading index="01" [title]="'translations.about.title' | translate"></app-section-heading>
 
         <div class="flex flex-col gap-10 lg:flex-row">
           <div class="min-w-0 flex-[1.2] space-y-6 text-lg leading-8 text-app-text-soft">
-            <p>
-              Técnico Superior en Desarrollo de Aplicaciones Multiplataforma, orientado al desarrollo de software con foco en aplicaciones web y Android. Mi principal fortaleza es construir soluciones con código limpio, mantenible y fácil de escalar.
-            </p>
-            <p>
-              Tengo experiencia reciente desarrollando un <span class="font-semibold text-app-heading">ERP desde cero</span> en equipo durante mis prácticas, usando Angular, GitFlow, Scrum y buenas prácticas. Me interesa especialmente el trabajo en equipo y la mejora continua a través de revisiones de código y sistemas de diseño bien planteados.
-            </p>
+            <p>{{ 'translations.about.paragraph_1' | translate }}</p>
+            <p [innerHTML]="'translations.about.paragraph_2' | translate"></p>
           </div>
 
           <div class="min-w-0 flex-[0.95] grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
@@ -68,8 +64,8 @@
                   <i class="pi pi-globe"></i>
                 </span>
                 <div>
-                  <h3 class="text-base font-semibold text-app-heading">Desarrollo web</h3>
-                  <p class="mt-2 text-sm leading-6 text-app-text-soft">Angular, TypeScript, Tailwind CSS y PrimeNG para interfaces modernas y mantenibles.</p>
+                  <h3 class="text-base font-semibold text-app-heading">{{ 'translations.about.cards.web.title' | translate }}</h3>
+                  <p class="mt-2 text-sm leading-6 text-app-text-soft">{{ 'translations.about.cards.web.description' | translate }}</p>
                 </div>
               </div>
             </p-card>
@@ -80,8 +76,8 @@
                   <i class="pi pi-mobile"></i>
                 </span>
                 <div>
-                  <h3 class="text-base font-semibold text-app-heading">Desarrollo móvil</h3>
-                  <p class="mt-2 text-sm leading-6 text-app-text-soft">Aplicaciones Android con Java y Android Studio, cuidando estructura y rendimiento.</p>
+                  <h3 class="text-base font-semibold text-app-heading">{{ 'translations.about.cards.mobile.title' | translate }}</h3>
+                  <p class="mt-2 text-sm leading-6 text-app-text-soft">{{ 'translations.about.cards.mobile.description' | translate }}</p>
                 </div>
               </div>
             </p-card>
@@ -92,8 +88,8 @@
                   <i class="pi pi-database"></i>
                 </span>
                 <div>
-                  <h3 class="text-base font-semibold text-app-heading">Bases de datos</h3>
-                  <p class="mt-2 text-sm leading-6 text-app-text-soft">Trabajo con SQL, Oracle, MongoDB y Firebase según las necesidades del producto.</p>
+                  <h3 class="text-base font-semibold text-app-heading">{{ 'translations.about.cards.data.title' | translate }}</h3>
+                  <p class="mt-2 text-sm leading-6 text-app-text-soft">{{ 'translations.about.cards.data.description' | translate }}</p>
                 </div>
               </div>
             </p-card>
@@ -104,8 +100,8 @@
                   <i class="pi pi-sitemap"></i>
                 </span>
                 <div>
-                  <h3 class="text-base font-semibold text-app-heading">Arquitectura limpia</h3>
-                  <p class="mt-2 text-sm leading-6 text-app-text-soft">Me interesa que el código sea legible, escalable y fácil de mantener en equipo.</p>
+                  <h3 class="text-base font-semibold text-app-heading">{{ 'translations.about.cards.architecture.title' | translate }}</h3>
+                  <p class="mt-2 text-sm leading-6 text-app-text-soft">{{ 'translations.about.cards.architecture.description' | translate }}</p>
                 </div>
               </div>
             </p-card>
@@ -116,23 +112,23 @@
 
     <section id="experiencia" class="ds-section-shell">
       <div class="ds-section-grid">
-        <app-section-heading index="02" title="Experiencia" description="La etapa más reciente en la que he trabajado con Angular, diseño de interfaz y dinámica de equipo real."></app-section-heading>
+        <app-section-heading index="02" [title]="'translations.experience.title' | translate" [description]="'translations.experience.description' | translate"></app-section-heading>
 
         <p-card styleClass="ds-card ds-card-lg">
           <div class="flex flex-col gap-6">
             <div class="flex flex-col gap-4 lg:flex-row lg:items-start lg:justify-between">
               <div>
                 <p class="text-sm font-semibold uppercase tracking-[0.16em] text-app-accent-strong">Mobivery</p>
-                <h3 class="mt-2 text-2xl font-semibold text-app-heading">Desarrollador Angular</h3>
+                <h3 class="mt-2 text-2xl font-semibold text-app-heading">{{ 'translations.experience.role' | translate }}</h3>
               </div>
               <div class="rounded-2xl bg-app-accent-muted px-4 py-3 text-sm text-app-text-soft">
-                <p>Febrero 2026 - Mayo 2026</p>
-                <p class="mt-1">Sevilla · Híbrido</p>
+                <p>{{ 'translations.experience.period' | translate }}</p>
+                <p class="mt-1">{{ 'translations.experience.location' | translate }}</p>
               </div>
             </div>
 
             <p class="max-w-4xl text-base leading-7 text-app-text-soft">
-              Participé en un equipo de 4 personas en el desarrollo desde cero de un ERP de gestión empresarial. Trabajamos con metodología Scrum, dailies y planificaciones semanales, usando GitFlow, feature branches y pull requests.
+              {{ 'translations.experience.summary' | translate }}
             </p>
 
             <div class="grid gap-3">
@@ -140,31 +136,31 @@
                 <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-app-accent-soft text-app-accent-strong">
                   <i class="pi pi-check text-xs"></i>
                 </span>
-                <p class="text-sm leading-6 text-app-text-soft">Desarrollo frontend con Angular moderno y Angular Signals.</p>
+                <p class="text-sm leading-6 text-app-text-soft">{{ 'translations.experience.points.frontend' | translate }}</p>
               </div>
               <div class="flex items-start gap-3 rounded-2xl border border-app-border bg-app-accent-fade px-4 py-4">
                 <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-app-accent-soft text-app-accent-strong">
                   <i class="pi pi-check text-xs"></i>
                 </span>
-                <p class="text-sm leading-6 text-app-text-soft">Integración con Firebase Auth y consumo de APIs mediante repositorios HTTP.</p>
+                <p class="text-sm leading-6 text-app-text-soft">{{ 'translations.experience.points.integration' | translate }}</p>
               </div>
               <div class="flex items-start gap-3 rounded-2xl border border-app-border bg-app-accent-fade px-4 py-4">
                 <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-app-accent-soft text-app-accent-strong">
                   <i class="pi pi-check text-xs"></i>
                 </span>
-                <p class="text-sm leading-6 text-app-text-soft">Uso de Tailwind CSS y PrimeNG para las interfaces.</p>
+                <p class="text-sm leading-6 text-app-text-soft">{{ 'translations.experience.points.ui' | translate }}</p>
               </div>
               <div class="flex items-start gap-3 rounded-2xl border border-app-border bg-app-accent-fade px-4 py-4">
                 <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-app-accent-soft text-app-accent-strong">
                   <i class="pi pi-check text-xs"></i>
                 </span>
-                <p class="text-sm leading-6 text-app-text-soft">Trabajo en módulos de clientes, ventas, usuarios, categorías, almacenes y productos.</p>
+                <p class="text-sm leading-6 text-app-text-soft">{{ 'translations.experience.points.modules' | translate }}</p>
               </div>
               <div class="flex items-start gap-3 rounded-2xl border border-app-border bg-app-accent-fade px-4 py-4">
                 <span class="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-app-accent-soft text-app-accent-strong">
                   <i class="pi pi-check text-xs"></i>
                 </span>
-                <p class="text-sm leading-6 text-app-text-soft">Aplicación de buenas prácticas y arquitectura limpia.</p>
+                <p class="text-sm leading-6 text-app-text-soft">{{ 'translations.experience.points.architecture' | translate }}</p>
               </div>
             </div>
 
@@ -186,33 +182,33 @@
 
     <section id="proyectos" class="ds-section-shell">
       <div class="ds-section-grid">
-        <app-section-heading index="03" title="Proyectos" description="Una selección de proyectos reales construidos durante mi formación y prácticas profesionales."></app-section-heading>
+        <app-section-heading index="03" [title]="'translations.projects.title' | translate" [description]="'translations.projects.description' | translate"></app-section-heading>
 
         <div class="flex flex-col gap-8">
           <p-card styleClass="ds-card ds-card-lg">
             <div class="flex flex-col">
               <div class="flex items-center justify-between gap-3">
-                <p-tag value="Proyecto de prácticas" severity="contrast" styleClass="rounded-full"></p-tag>
+                <p-tag [value]="'translations.projects.erp.badge' | translate" severity="contrast" styleClass="rounded-full"></p-tag>
                 <a
                   href="https://github.com/practicasmb/fct2026/tree/development"
                   target="_blank"
                   rel="noopener noreferrer"
                   class="inline-flex items-center gap-1.5 text-sm font-medium text-app-accent-strong hover:underline"
                 >
-                  <span>Ver repositorio</span>
+                  <span>{{ 'translations.projects.erp.view_repository' | translate }}</span>
                   <i class="pi pi-arrow-up-right text-xs"></i>
                 </a>
               </div>
 
-              <h3 class="mt-4 text-2xl font-semibold text-app-heading">ERP de gestión empresarial</h3>
+              <h3 class="mt-4 text-2xl font-semibold text-app-heading">{{ 'translations.projects.erp.title' | translate }}</h3>
               <p class="mt-3 max-w-4xl text-sm leading-7 text-app-text-soft">
-                Aplicación web modular para gestión de dashboard, usuarios, departamentos, productos, categorías, clientes, proveedores, compras, ventas y almacenes.
+                {{ 'translations.projects.erp.description' | translate }}
               </p>
 
               <div class="mt-5 overflow-hidden rounded-[1.5rem] border border-app-border">
                 <p-galleria
                   [value]="erpImages"
-                  [activeIndex]="erpActiveIndex"
+                  [activeIndex]="erpActiveIndex()"
                   [numVisible]="5"
                   [showThumbnails]="true"
                   [showItemNavigators]="true"
@@ -229,11 +225,11 @@
                       type="button"
                       class="flex aspect-[16/9] w-full cursor-zoom-in items-center justify-center bg-slate-900 px-4 py-4 text-left sm:px-6"
                       (click)="openErpFullscreen()"
-                      [attr.aria-label]="'Ampliar imagen: ' + item.alt"
+                      [attr.aria-label]="'translations.projects.erp.expand_image' | translate"
                     >
                       <img
                         [src]="item.itemImageSrc"
-                        [alt]="item.alt"
+                        [alt]="item.altKey | translate"
                         class="block max-h-full w-full rounded-xl border border-white/10 bg-white object-contain shadow-app-lg"
                       />
                     </button>
@@ -241,17 +237,17 @@
                   <ng-template #thumbnail let-item>
                     <img
                       [src]="item.thumbnailImageSrc"
-                      [alt]="item.alt"
+                      [alt]="item.altKey | translate"
                       class="block h-[4.25rem] w-full rounded-xl border border-app-border bg-slate-900 p-1 object-contain"
                     />
                   </ng-template>
                 </p-galleria>
               </div>
               <p-galleria
-                [visible]="erpFullscreenVisible"
-                (visibleChange)="erpFullscreenVisible = $event"
+                [visible]="erpFullscreenVisible()"
+                (visibleChange)="erpFullscreenVisible.set($event)"
                 [value]="erpImages"
-                [activeIndex]="erpActiveIndex"
+                [activeIndex]="erpActiveIndex()"
                 (activeIndexChange)="handleErpGalleryIndexChange($event)"
                 [showThumbnails]="false"
                 [showItemNavigators]="true"
@@ -264,7 +260,7 @@
                   <div class="flex h-[84vh] items-center justify-center bg-slate-950 px-4 py-4 sm:h-[88vh] sm:px-8">
                     <img
                       [src]="item.itemImageSrc"
-                      [alt]="item.alt"
+                      [alt]="item.altKey | translate"
                       class="block max-h-full w-auto max-w-[min(96vw,1600px)] rounded-xl border border-white/10 bg-white object-contain shadow-app-lg"
                     />
                   </div>
@@ -287,7 +283,7 @@
                 <a
                   pButton
                   href="https://github.com/practicasmb/fct2026/tree/development"
-                  label="Ver repositorio"
+                  [label]="'translations.projects.erp.view_repository' | translate"
                   icon="pi pi-github"
                   [outlined]="true"
                   [rounded]="true"
@@ -297,7 +293,7 @@
                 <a
                   pButton
                   href="https://practicasmobiveryprod.web.app/"
-                  label="Ver web"
+                  [label]="'translations.projects.erp.view_site' | translate"
                   icon="pi pi-external-link"
                   severity="secondary"
                   [text]="true"
@@ -312,13 +308,13 @@
           <p-card styleClass="ds-card ds-card-lg">
             <div class="flex flex-col">
               <div class="flex items-center justify-between gap-3">
-                <p-tag value="TFG · Web y Android" severity="contrast" styleClass="rounded-full"></p-tag>
+                <p-tag [value]="'translations.projects.bookhealth.badge' | translate" severity="contrast" styleClass="rounded-full"></p-tag>
                 <i class="pi pi-lock text-app-text-muted"></i>
               </div>
 
               <h3 class="mt-5 text-2xl font-semibold text-app-heading">BookHealth</h3>
               <p class="mt-4 text-sm leading-7 text-app-text-soft">
-                Plataforma de citas sanitarias que conecta clientes con profesionales sanitarios privados. Incluye versión web y aplicación Android, con autenticación, roles, perfiles, citas, valoraciones y mapas.
+                {{ 'translations.projects.bookhealth.description' | translate }}
               </p>
 
               <div class="mt-5 flex flex-wrap items-center gap-3">
@@ -326,33 +322,33 @@
                   <button
                     pButton
                     type="button"
-                    label="Web"
+                    [label]="'translations.common.web' | translate"
                     icon="pi pi-desktop"
                     [rounded]="true"
-                    [severity]="bookHealthPlatform === 'web' ? 'contrast' : 'secondary'"
+                    [severity]="bookHealthPlatform() === 'web' ? 'contrast' : 'secondary'"
                     (click)="setBookHealthPlatform('web')"
                   ></button>
                   <button
                     pButton
                     type="button"
-                    label="Android"
+                    [label]="'translations.common.android' | translate"
                     icon="pi pi-mobile"
                     [rounded]="true"
-                    [severity]="bookHealthPlatform === 'android' ? 'contrast' : 'secondary'"
+                    [severity]="bookHealthPlatform() === 'android' ? 'contrast' : 'secondary'"
                     (click)="setBookHealthPlatform('android')"
                   ></button>
                 </div>
                 <span class="text-xs font-medium text-app-text-muted">
-                  {{ bookHealthPlatform === 'web' ? 'Vista web activa' : 'Vista Android activa' }}
+                  {{ currentBookHealthPlatformStatusKey() | translate }}
                 </span>
               </div>
 
               <div class="mt-5 overflow-hidden rounded-[1.5rem] border border-app-border">
-                <ng-container *ngIf="bookHealthHasImages; else bookHealthEmptyState">
+                <ng-container *ngIf="bookHealthHasImages(); else bookHealthEmptyState">
                   <p-galleria
-                    [value]="currentBookHealthImages"
-                    [activeIndex]="bookHealthActiveIndex"
-                    [numVisible]="currentBookHealthNumVisible"
+                    [value]="currentBookHealthImages()"
+                    [activeIndex]="bookHealthActiveIndex()"
+                    [numVisible]="currentBookHealthNumVisible()"
                     [showThumbnails]="true"
                     [showItemNavigators]="true"
                     [showThumbnailNavigators]="true"
@@ -367,15 +363,15 @@
                       <button
                         type="button"
                         class="flex w-full cursor-zoom-in items-center justify-center text-left"
-                        [ngClass]="[currentBookHealthViewportClass, currentBookHealthGalleryClass]"
+                        [ngClass]="[currentBookHealthViewportClass(), currentBookHealthGalleryClass()]"
                         (click)="openBookHealthFullscreen()"
-                        [attr.aria-label]="'Ampliar imagen: ' + item.alt"
+                        [attr.aria-label]="'translations.projects.bookhealth.expand_image' | translate"
                       >
-                        <img [src]="item.itemImageSrc" [alt]="item.alt" [class]="currentBookHealthImageClass" />
+                        <img [src]="item.itemImageSrc" [alt]="item.altKey | translate" [class]="currentBookHealthImageClass()" />
                       </button>
                     </ng-template>
                     <ng-template #thumbnail let-item>
-                      <img [src]="item.thumbnailImageSrc" [alt]="item.alt" [class]="currentBookHealthThumbnailClass" />
+                      <img [src]="item.thumbnailImageSrc" [alt]="item.altKey | translate" [class]="currentBookHealthThumbnailClass()" />
                     </ng-template>
                   </p-galleria>
                 </ng-container>
@@ -386,19 +382,19 @@
                       <i class="pi pi-mobile text-2xl"></i>
                     </span>
                     <div class="max-w-md space-y-2">
-                      <p class="text-base font-semibold text-white">Galería BookHealth preparada</p>
+                      <p class="text-base font-semibold text-white">{{ 'translations.projects.bookhealth.empty.title' | translate }}</p>
                       <p class="text-sm leading-6 text-white/70">
-                        La estructura está lista para mostrar capturas de BookHealth en cuanto añadamos nuevas pantallas al proyecto.
+                        {{ 'translations.projects.bookhealth.empty.description' | translate }}
                       </p>
                     </div>
                   </div>
                 </ng-template>
               </div>
               <p-galleria
-                [visible]="bookHealthFullscreenVisible"
-                (visibleChange)="bookHealthFullscreenVisible = $event"
-                [value]="currentBookHealthImages"
-                [activeIndex]="bookHealthActiveIndex"
+                [visible]="bookHealthFullscreenVisible()"
+                (visibleChange)="bookHealthFullscreenVisible.set($event)"
+                [value]="currentBookHealthImages()"
+                [activeIndex]="bookHealthActiveIndex()"
                 (activeIndexChange)="handleBookHealthGalleryIndexChange($event)"
                 [showThumbnails]="false"
                 [showItemNavigators]="true"
@@ -408,11 +404,11 @@
                 [containerStyle]="{ 'max-width': '96vw' }"
               >
                 <ng-template #item let-item>
-                  <div class="flex h-[84vh] items-center justify-center px-4 py-4 sm:h-[88vh] sm:px-8" [ngClass]="currentBookHealthGalleryClass">
+                  <div class="flex h-[84vh] items-center justify-center px-4 py-4 sm:h-[88vh] sm:px-8" [ngClass]="currentBookHealthGalleryClass()">
                     <img
                       [src]="item.itemImageSrc"
-                      [alt]="item.alt"
-                      [class]="bookHealthPlatform === 'web'
+                      [alt]="item.altKey | translate"
+                      [class]="bookHealthPlatform() === 'web'
                         ? 'block max-h-full w-auto max-w-[min(96vw,1600px)] rounded-xl border border-white/10 bg-white object-contain shadow-app-lg'
                         : 'block max-h-full w-auto max-w-[min(92vw,520px)] rounded-[1.75rem] border border-white/10 bg-white object-contain shadow-app-lg'"
                     />
@@ -421,13 +417,13 @@
               </p-galleria>
 
               <div class="mt-5 flex flex-wrap gap-2">
-                <p-chip *ngFor="let tech of currentBookHealthStack" [label]="tech"></p-chip>
+                <p-chip *ngFor="let tech of currentBookHealthStack()" [label]="tech"></p-chip>
               </div>
 
               <div class="mt-5">
                 <span class="inline-flex items-center gap-2 text-sm font-medium text-app-text-muted">
                   <i class="pi pi-lock"></i>
-                  Repositorios privados
+                  {{ 'translations.projects.bookhealth.private_repositories' | translate }}
                 </span>
               </div>
             </div>
@@ -438,7 +434,7 @@
 
     <section id="tecnologias" class="ds-section-shell">
       <div class="ds-section-grid">
-        <app-section-heading index="04" title="Tecnologías" description="Herramientas y lenguajes con los que trabajo en el día a día, agrupados para reflejar mejor mi stack real."></app-section-heading>
+        <app-section-heading index="04" [title]="'translations.technologies.title' | translate" [description]="'translations.technologies.description' | translate"></app-section-heading>
 
         <div class="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
           <p-card styleClass="h-full ds-card">
@@ -446,7 +442,7 @@
               <span class="grid h-12 w-12 place-items-center rounded-2xl bg-app-accent-muted text-app-accent-strong">
                 <i class="pi pi-code"></i>
               </span>
-              <h3 class="text-base font-semibold text-app-heading">Frontend</h3>
+              <h3 class="text-base font-semibold text-app-heading">{{ 'translations.technologies.categories.frontend' | translate }}</h3>
             </div>
             <div class="mt-5 flex flex-wrap gap-2">
               <p-chip label="Angular"></p-chip>
@@ -462,7 +458,7 @@
               <span class="grid h-12 w-12 place-items-center rounded-2xl bg-app-accent-muted text-app-accent-strong">
                 <i class="pi pi-mobile"></i>
               </span>
-              <h3 class="text-base font-semibold text-app-heading">Mobile</h3>
+              <h3 class="text-base font-semibold text-app-heading">{{ 'translations.technologies.categories.mobile' | translate }}</h3>
             </div>
             <div class="mt-5 flex flex-wrap gap-2">
               <p-chip label="Java"></p-chip>
@@ -475,7 +471,7 @@
               <span class="grid h-12 w-12 place-items-center rounded-2xl bg-app-accent-muted text-app-accent-strong">
                 <i class="pi pi-database"></i>
               </span>
-              <h3 class="text-base font-semibold text-app-heading">Bases de datos</h3>
+              <h3 class="text-base font-semibold text-app-heading">{{ 'translations.technologies.categories.data' | translate }}</h3>
             </div>
             <div class="mt-5 flex flex-wrap gap-2">
               <p-chip label="SQL"></p-chip>
@@ -490,7 +486,7 @@
               <span class="grid h-12 w-12 place-items-center rounded-2xl bg-app-accent-muted text-app-accent-strong">
                 <i class="pi pi-github"></i>
               </span>
-              <h3 class="text-base font-semibold text-app-heading">Herramientas y metodología</h3>
+              <h3 class="text-base font-semibold text-app-heading">{{ 'translations.technologies.categories.tools' | translate }}</h3>
             </div>
             <div class="mt-5 flex flex-wrap gap-2">
               <p-chip label="Git"></p-chip>
@@ -506,7 +502,7 @@
               <span class="grid h-12 w-12 place-items-center rounded-2xl bg-app-accent-muted text-app-accent-strong">
                 <i class="pi pi-box"></i>
               </span>
-              <h3 class="text-base font-semibold text-app-heading">Otros</h3>
+              <h3 class="text-base font-semibold text-app-heading">{{ 'translations.technologies.categories.other' | translate }}</h3>
             </div>
             <div class="mt-5 flex flex-wrap gap-2">
               <p-chip label="Python"></p-chip>
@@ -521,7 +517,7 @@
 
     <section id="formacion" class="ds-section-shell">
       <div class="ds-section-grid">
-        <app-section-heading index="05" title="Formación" description="Base académica y competencias personales que definen cómo trabajo y cómo afronto proyectos nuevos."></app-section-heading>
+        <app-section-heading index="05" [title]="'translations.education.title' | translate" [description]="'translations.education.description' | translate"></app-section-heading>
 
         <div class="flex flex-col gap-8 xl:flex-row">
           <p-card styleClass="min-w-0 flex-1 ds-card ds-card-lg">
@@ -531,10 +527,10 @@
                   <i class="pi pi-prime"></i>
                 </span>
                 <div>
-                  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-app-text-muted">Septiembre 2024 - Junio 2026</p>
-                  <h3 class="mt-2 text-lg font-semibold text-app-heading">Técnico Superior en Desarrollo de Aplicaciones Multiplataforma</h3>
-                  <p class="mt-1 text-sm font-medium text-app-accent-strong">I.E.S. Profesor Juan Antonio Carrillo Salcedo</p>
-                  <p class="mt-3 text-sm leading-7 text-app-text-soft">Formación en desarrollo web, móvil, bases de datos, servicios, procesos, diseño de interfaces y desarrollo multiplataforma.</p>
+                  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-app-text-muted">{{ 'translations.education.dam.period' | translate }}</p>
+                  <h3 class="mt-2 text-lg font-semibold text-app-heading">{{ 'translations.education.dam.title' | translate }}</h3>
+                  <p class="mt-1 text-sm font-medium text-app-accent-strong">{{ 'translations.education.dam.school' | translate }}</p>
+                  <p class="mt-3 text-sm leading-7 text-app-text-soft">{{ 'translations.education.dam.description' | translate }}</p>
                 </div>
               </div>
 
@@ -543,25 +539,18 @@
                   <i class="pi pi-book"></i>
                 </span>
                 <div>
-                  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-app-text-muted">2019 - 2024</p>
-                  <h3 class="mt-2 text-lg font-semibold text-app-heading">Grado en Psicología</h3>
-                  <p class="mt-1 text-sm font-medium text-app-accent-strong">Universidad de Sevilla</p>
+                  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-app-text-muted">{{ 'translations.education.psychology.period' | translate }}</p>
+                  <h3 class="mt-2 text-lg font-semibold text-app-heading">{{ 'translations.education.psychology.title' | translate }}</h3>
+                  <p class="mt-1 text-sm font-medium text-app-accent-strong">{{ 'translations.education.psychology.school' | translate }}</p>
                 </div>
               </div>
             </div>
           </p-card>
 
           <p-card styleClass="h-fit w-80 shrink-0 ds-card ds-card-lg">
-            <h3 class="text-sm font-semibold uppercase tracking-[0.18em] text-app-accent-strong">Competencias personales</h3>
+            <h3 class="text-sm font-semibold uppercase tracking-[0.18em] text-app-accent-strong">{{ 'translations.education.soft_skills.title' | translate }}</h3>
             <div class="mt-5 flex flex-wrap gap-2">
-              <p-tag value="Trabajo en equipo" severity="secondary" styleClass="rounded-full px-3 py-1"></p-tag>
-              <p-tag value="Resiliencia" severity="secondary" styleClass="rounded-full px-3 py-1"></p-tag>
-              <p-tag value="Aprendizaje rápido" severity="secondary" styleClass="rounded-full px-3 py-1"></p-tag>
-              <p-tag value="Organización" severity="secondary" styleClass="rounded-full px-3 py-1"></p-tag>
-              <p-tag value="Responsabilidad" severity="secondary" styleClass="rounded-full px-3 py-1"></p-tag>
-              <p-tag value="Comunicación" severity="secondary" styleClass="rounded-full px-3 py-1"></p-tag>
-              <p-tag value="Adaptabilidad" severity="secondary" styleClass="rounded-full px-3 py-1"></p-tag>
-              <p-tag value="Trabajo bajo presión" severity="secondary" styleClass="rounded-full px-3 py-1"></p-tag>
+              <p-tag *ngFor="let skillKey of softSkillKeys" [value]="skillKey | translate" severity="secondary" styleClass="rounded-full px-3 py-1"></p-tag>
             </div>
           </p-card>
         </div>
@@ -570,7 +559,7 @@
 
     <section id="contacto" class="ds-section-shell pb-14">
       <div class="ds-section-grid">
-        <app-section-heading index="06" title="Contacto" description="Si tienes una oportunidad, una colaboración o simplemente quieres hablar sobre producto y frontend, estaré encantado de leerte."></app-section-heading>
+        <app-section-heading index="06" [title]="'translations.contact.title' | translate" [description]="'translations.contact.description' | translate"></app-section-heading>
 
         <div class="grid gap-4 md:grid-cols-3">
           <a href="mailto:jesuslgdev@gmail.com" class="block">
@@ -580,7 +569,7 @@
                   <i class="pi pi-envelope"></i>
                 </span>
                 <div>
-                  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-app-text-muted">Email</p>
+                  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-app-text-muted">{{ 'translations.contact.cards.email' | translate }}</p>
                   <p class="mt-2 text-base font-semibold text-app-heading">jesuslgdev&#64;gmail.com</p>
                 </div>
               </div>
@@ -594,7 +583,7 @@
                   <i class="pi pi-phone"></i>
                 </span>
                 <div>
-                  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-app-text-muted">Teléfono</p>
+                  <p class="text-xs font-semibold uppercase tracking-[0.16em] text-app-text-muted">{{ 'translations.contact.cards.phone' | translate }}</p>
                   <p class="mt-2 text-base font-semibold text-app-heading">656 940 672</p>
                 </div>
               </div>
@@ -607,8 +596,8 @@
                 <i class="pi pi-map-marker"></i>
               </span>
               <div>
-                <p class="text-xs font-semibold uppercase tracking-[0.16em] text-app-text-muted">Ubicación</p>
-                <p class="mt-2 text-base font-semibold text-app-heading">Arahal, Sevilla</p>
+                <p class="text-xs font-semibold uppercase tracking-[0.16em] text-app-text-muted">{{ 'translations.contact.cards.location' | translate }}</p>
+                <p class="mt-2 text-base font-semibold text-app-heading">{{ 'translations.contact.cards.location_value' | translate }}</p>
               </div>
             </div>
           </p-card>
@@ -618,7 +607,7 @@
           <a
             pButton
             href="https://github.com/jesuslgdev"
-            label="GitHub"
+            [label]="'translations.common.github' | translate"
             icon="pi pi-github"
             [outlined]="true"
             [rounded]="true"
@@ -628,7 +617,7 @@
           <a
             pButton
             href="https://www.linkedin.com/in/jes%C3%BAs-lobato-gonz%C3%A1lez-528345332/"
-            label="LinkedIn"
+            [label]="'translations.common.linkedin' | translate"
             icon="pi pi-linkedin"
             [outlined]="true"
             [rounded]="true"

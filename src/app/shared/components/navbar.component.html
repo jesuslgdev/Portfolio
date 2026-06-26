@@ -10,29 +10,49 @@
       <span class="grid h-11 w-11 place-items-center rounded-2xl bg-app-accent-soft text-app-accent-strong shadow-app-sm">
         JL
       </span>
-      <span class="hidden sm:block">Jesús Lobato</span>
+      <span class="hidden sm:block">{{ 'translations.navbar.brand_name' | translate }}</span>
     </a>
 
     <nav class="hidden items-center gap-8 md:flex">
-      <a class="text-sm font-medium text-app-text-soft transition hover:text-app-heading" href="#sobre-mi">Sobre mí</a>
-      <a class="text-sm font-medium text-app-text-soft transition hover:text-app-heading" href="#experiencia">Experiencia</a>
-      <a class="text-sm font-medium text-app-text-soft transition hover:text-app-heading" href="#proyectos">Proyectos</a>
-      <a class="text-sm font-medium text-app-text-soft transition hover:text-app-heading" href="#tecnologias">Tecnologías</a>
-      <a class="text-sm font-medium text-app-text-soft transition hover:text-app-heading" href="#formacion">Formación</a>
-      <a class="text-sm font-medium text-app-text-soft transition hover:text-app-heading" href="#contacto">Contacto</a>
+      <a class="text-sm font-medium text-app-text-soft transition hover:text-app-heading" href="#sobre-mi">{{ 'translations.navbar.about' | translate }}</a>
+      <a class="text-sm font-medium text-app-text-soft transition hover:text-app-heading" href="#experiencia">{{ 'translations.navbar.experience' | translate }}</a>
+      <a class="text-sm font-medium text-app-text-soft transition hover:text-app-heading" href="#proyectos">{{ 'translations.navbar.projects' | translate }}</a>
+      <a class="text-sm font-medium text-app-text-soft transition hover:text-app-heading" href="#tecnologias">{{ 'translations.navbar.technologies' | translate }}</a>
+      <a class="text-sm font-medium text-app-text-soft transition hover:text-app-heading" href="#formacion">{{ 'translations.navbar.education' | translate }}</a>
+      <a class="text-sm font-medium text-app-text-soft transition hover:text-app-heading" href="#contacto">{{ 'translations.navbar.contact' | translate }}</a>
     </nav>
 
-    <div class="hidden items-center gap-3 md:flex">
+    <div class="hidden items-center gap-2 md:flex">
       <a
         pButton
         href="/cv_jesus_lobato.pdf"
         download="cv_jesus_lobato.pdf"
-        label="Descargar CV"
+        [label]="'translations.navbar.download_cv' | translate"
         icon="pi pi-download"
         iconPos="right"
         severity="contrast"
         [rounded]="true"
       ></a>
+      <span id="navbar-language-label-desktop" class="sr-only">
+        {{ 'translations.navbar.language_toggle_aria' | translate }}
+      </span>
+      <p-selectbutton
+        [options]="languageOptions"
+        [ngModel]="currentLanguage()"
+        (ngModelChange)="onLanguageChange($event)"
+        optionLabel="shortLabel"
+        optionValue="code"
+        [allowEmpty]="false"
+        styleClass="text-xs"
+        [ariaLabelledBy]="'navbar-language-label-desktop'"
+      >
+        <ng-template #item let-option>
+          <span class="inline-flex items-center gap-1.5 px-0.5">
+            <img [src]="option.flagSrc" [alt]="option.flagAlt" class="h-3.5 w-3.5 rounded-full object-cover" />
+            <span class="text-xs font-semibold">{{ option.shortLabel }}</span>
+          </span>
+        </ng-template>
+      </p-selectbutton>
     </div>
 
     <button
@@ -40,7 +60,7 @@
       class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-app-border bg-white text-app-heading md:hidden"
       (click)="toggleMenu()"
       [attr.aria-expanded]="menuOpen()"
-      aria-label="Abrir navegación"
+      [attr.aria-label]="menuAriaLabelKey | translate"
     >
       <i class="pi text-base" [class.pi-bars]="!menuOpen()" [class.pi-times]="menuOpen()"></i>
     </button>
@@ -48,13 +68,35 @@
 
   @if (menuOpen()) {
     <div class="border-t border-app-border bg-app-page-background px-5 py-4 md:hidden">
+      <div class="mx-auto mb-4 flex ds-max-w-page items-center justify-between gap-3">
+        <span id="navbar-language-label-mobile" class="text-xs font-semibold uppercase tracking-[0.16em] text-app-text-muted">
+          {{ 'translations.navbar.language_label' | translate }}
+        </span>
+        <p-selectbutton
+          [options]="languageOptions"
+          [ngModel]="currentLanguage()"
+          (ngModelChange)="onLanguageChange($event)"
+          optionLabel="shortLabel"
+          optionValue="code"
+          [allowEmpty]="false"
+          styleClass="text-xs"
+          [ariaLabelledBy]="'navbar-language-label-mobile'"
+        >
+          <ng-template #item let-option>
+            <span class="inline-flex items-center gap-1.5 px-0.5">
+              <img [src]="option.flagSrc" [alt]="option.flagAlt" class="h-3.5 w-3.5 rounded-full object-cover" />
+              <span class="text-xs font-semibold">{{ option.shortLabel }}</span>
+            </span>
+          </ng-template>
+        </p-selectbutton>
+      </div>
       <nav class="mx-auto flex ds-max-w-page flex-col gap-2">
-        <a class="rounded-2xl px-4 py-3 text-sm font-medium text-app-text-soft transition hover:bg-app-accent-muted hover:text-app-heading" href="#sobre-mi" (click)="closeMenu()">Sobre mí</a>
-        <a class="rounded-2xl px-4 py-3 text-sm font-medium text-app-text-soft transition hover:bg-app-accent-muted hover:text-app-heading" href="#experiencia" (click)="closeMenu()">Experiencia</a>
-        <a class="rounded-2xl px-4 py-3 text-sm font-medium text-app-text-soft transition hover:bg-app-accent-muted hover:text-app-heading" href="#proyectos" (click)="closeMenu()">Proyectos</a>
-        <a class="rounded-2xl px-4 py-3 text-sm font-medium text-app-text-soft transition hover:bg-app-accent-muted hover:text-app-heading" href="#tecnologias" (click)="closeMenu()">Tecnologías</a>
-        <a class="rounded-2xl px-4 py-3 text-sm font-medium text-app-text-soft transition hover:bg-app-accent-muted hover:text-app-heading" href="#formacion" (click)="closeMenu()">Formación</a>
-        <a class="rounded-2xl px-4 py-3 text-sm font-medium text-app-text-soft transition hover:bg-app-accent-muted hover:text-app-heading" href="#contacto" (click)="closeMenu()">Contacto</a>
+        <a class="rounded-2xl px-4 py-3 text-sm font-medium text-app-text-soft transition hover:bg-app-accent-muted hover:text-app-heading" href="#sobre-mi" (click)="closeMenu()">{{ 'translations.navbar.about' | translate }}</a>
+        <a class="rounded-2xl px-4 py-3 text-sm font-medium text-app-text-soft transition hover:bg-app-accent-muted hover:text-app-heading" href="#experiencia" (click)="closeMenu()">{{ 'translations.navbar.experience' | translate }}</a>
+        <a class="rounded-2xl px-4 py-3 text-sm font-medium text-app-text-soft transition hover:bg-app-accent-muted hover:text-app-heading" href="#proyectos" (click)="closeMenu()">{{ 'translations.navbar.projects' | translate }}</a>
+        <a class="rounded-2xl px-4 py-3 text-sm font-medium text-app-text-soft transition hover:bg-app-accent-muted hover:text-app-heading" href="#tecnologias" (click)="closeMenu()">{{ 'translations.navbar.technologies' | translate }}</a>
+        <a class="rounded-2xl px-4 py-3 text-sm font-medium text-app-text-soft transition hover:bg-app-accent-muted hover:text-app-heading" href="#formacion" (click)="closeMenu()">{{ 'translations.navbar.education' | translate }}</a>
+        <a class="rounded-2xl px-4 py-3 text-sm font-medium text-app-text-soft transition hover:bg-app-accent-muted hover:text-app-heading" href="#contacto" (click)="closeMenu()">{{ 'translations.navbar.contact' | translate }}</a>
       </nav>
     </div>
   }

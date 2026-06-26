@@ -1,0 +1,209 @@
+{
+  "translations": {
+    "common": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "web": "Web",
+      "android": "Android"
+    },
+    "navbar": {
+      "brand_name": "Jesús Lobato",
+      "about": "About me",
+      "experience": "Experience",
+      "projects": "Projects",
+      "technologies": "Technologies",
+      "education": "Education",
+      "contact": "Contact",
+      "download_cv": "Download CV",
+      "language_label": "Language",
+      "language_toggle_aria": "Switch language between Spanish and English",
+      "open_navigation_aria": "Open navigation",
+      "close_navigation_aria": "Close navigation"
+    },
+    "hero": {
+      "availability": "Available for new opportunities",
+      "name": "Jesús Lobato González",
+      "subtitle": "Software developer focused on Angular, PrimeNG, and Android.",
+      "description": "I build modern, clean, and maintainable interfaces. I enjoy working from a solid design base and well-structured code, taking care of both the visual experience and the technical clarity of the product.",
+      "location": "Arahal, Seville · Spain",
+      "cta_projects": "View projects",
+      "cta_contact": "Get in touch",
+      "profile_alt": "Portrait of Jesús Lobato"
+    },
+    "about": {
+      "title": "About me",
+      "paragraph_1": "Higher Technician in Multiplatform Application Development, focused on software development for web and Android applications. My main strength is building solutions with clean, maintainable, and easy-to-scale code.",
+      "paragraph_2": "I recently gained experience building an <span class=\"font-semibold text-app-heading\">ERP from scratch</span> as part of a team during my internship, using Angular, GitFlow, Scrum, and solid engineering practices. I am especially interested in teamwork and continuous improvement through code reviews and well-structured design systems.",
+      "cards": {
+        "web": {
+          "title": "Web development",
+          "description": "Angular, TypeScript, Tailwind CSS, and PrimeNG for modern and maintainable interfaces."
+        },
+        "mobile": {
+          "title": "Mobile development",
+          "description": "Android applications built with Java and Android Studio, with attention to structure and performance."
+        },
+        "data": {
+          "title": "Databases",
+          "description": "I work with SQL, Oracle, MongoDB, and Firebase depending on the product needs."
+        },
+        "architecture": {
+          "title": "Clean architecture",
+          "description": "I care about keeping code readable, scalable, and easy to maintain within a team."
+        }
+      }
+    },
+    "experience": {
+      "title": "Experience",
+      "description": "The most recent stage where I worked with Angular, interface design, and real team dynamics.",
+      "role": "Angular Developer",
+      "period": "February 2026 - May 2026",
+      "location": "Seville · Hybrid",
+      "summary": "I worked in a 4-person team building an ERP for business management from scratch. We used Scrum, daily stand-ups, weekly planning, GitFlow, feature branches, and pull requests.",
+      "points": {
+        "frontend": "Frontend development with modern Angular and Angular Signals.",
+        "integration": "Integration with Firebase Auth and API consumption through HTTP repositories.",
+        "ui": "Use of Tailwind CSS and PrimeNG for the interfaces.",
+        "modules": "Work on modules for clients, sales, users, categories, warehouses, and products.",
+        "architecture": "Application of good practices and clean architecture."
+      }
+    },
+    "projects": {
+      "title": "Projects",
+      "description": "A selection of real projects built during my studies and professional internships.",
+      "erp": {
+        "badge": "Internship project",
+        "title": "Business management ERP",
+        "description": "Modular web application for managing dashboard, users, departments, products, categories, clients, suppliers, purchases, sales, and warehouses.",
+        "view_repository": "View repository",
+        "view_site": "View site",
+        "expand_image": "Expand ERP image",
+        "gallery": {
+          "login": "ERP login screen",
+          "dashboard": "ERP main dashboard",
+          "clients": "ERP client module",
+          "products": "ERP product module",
+          "sales": "ERP sales module",
+          "users": "ERP user module"
+        }
+      },
+      "bookhealth": {
+        "badge": "Final degree project · Web and Android",
+        "description": "Healthcare appointment platform that connects clients with private healthcare professionals. It includes a web version and an Android application, with authentication, roles, profiles, appointments, reviews, and maps.",
+        "web_active": "Web view active",
+        "android_active": "Android view active",
+        "expand_image": "Expand BookHealth image",
+        "private_repositories": "Private repositories",
+        "empty": {
+          "title": "BookHealth gallery ready",
+          "description": "The structure is ready to display BookHealth screenshots as soon as new screens are added to the project."
+        },
+        "gallery": {
+          "web_home": "BookHealth web home",
+          "web_professionals": "Professionals list in BookHealth web",
+          "web_detail": "Professional detail in BookHealth web",
+          "web_appointments": "Client appointments in BookHealth web",
+          "web_dashboard": "Professionals dashboard in BookHealth web",
+          "android_home": "BookHealth Android home",
+          "android_professionals": "Professionals list in BookHealth Android",
+          "android_detail": "Professional detail in BookHealth Android",
+          "android_map": "Professionals map in BookHealth Android",
+          "android_appointments": "My appointments in BookHealth Android"
+        }
+      }
+    },
+    "technologies": {
+      "title": "Technologies",
+      "description": "Tools and languages I work with day to day, grouped to better reflect my real stack.",
+      "categories": {
+        "frontend": "Frontend",
+        "mobile": "Mobile",
+        "data": "Databases",
+        "tools": "Tools and methodology",
+        "other": "Other"
+      }
+    },
+    "education": {
+      "title": "Education",
+      "description": "Academic background and personal skills that define how I work and how I approach new projects.",
+      "dam": {
+        "period": "September 2024 - June 2026",
+        "title": "Higher Technician in Multiplatform Application Development",
+        "school": "I.E.S. Profesor Juan Antonio Carrillo Salcedo",
+        "description": "Training in web development, mobile development, databases, services, processes, interface design, and multiplatform software development."
+      },
+      "psychology": {
+        "period": "2019 - 2024",
+        "title": "Degree in Psychology",
+        "school": "University of Seville"
+      },
+      "soft_skills": {
+        "title": "Soft skills",
+        "teamwork": "Teamwork",
+        "resilience": "Resilience",
+        "fast_learning": "Fast learning",
+        "organization": "Organization",
+        "responsibility": "Responsibility",
+        "communication": "Communication",
+        "adaptability": "Adaptability",
+        "work_under_pressure": "Working under pressure"
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "description": "If you have an opportunity, a collaboration, or simply want to talk about product and frontend, I would be happy to hear from you.",
+      "cards": {
+        "email": "Email",
+        "phone": "Phone",
+        "location": "Location",
+        "location_value": "Arahal, Seville"
+      },
+      "form": {
+        "title": "Send me a message",
+        "subtitle": "Fill out the form and I will get back to you as soon as possible.",
+        "submit": "Send message",
+        "submit_loading": "Sending...",
+        "fields": {
+          "name": {
+            "label": "Name",
+            "placeholder": "Your name"
+          },
+          "email": {
+            "label": "Email",
+            "placeholder": "your@email.com"
+          },
+          "subject": {
+            "label": "Subject",
+            "placeholder": "What would you like to talk about?"
+          },
+          "message": {
+            "label": "Message",
+            "placeholder": "Write your message here..."
+          }
+        },
+        "validation": {
+          "name_required": "Name is required.",
+          "email_required": "Email is required.",
+          "email_invalid": "Enter a valid email address.",
+          "message_required": "Message is required."
+        },
+        "success": {
+          "title": "Message sent successfully",
+          "description": "Thank you for reaching out. I will reply as soon as possible.",
+          "cta": "Send another message"
+        },
+        "error": {
+          "title": "Error while sending",
+          "retry": "Retry",
+          "service_rejected": "The service rejected the submission. Please try again.",
+          "network": "Could not connect to the server. Please check your connection.",
+          "generic": "There was an error sending the message. Please try again later."
+        }
+      }
+    },
+    "footer": {
+      "copyright": "© {{year}} Jesús Lobato González",
+      "built_with": "Designed and built with Angular, PrimeNG, and Tailwind CSS."
+    }
+  }
+}

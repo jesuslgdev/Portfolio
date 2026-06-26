@@ -1,6 +1,6 @@
 <footer class="border-t border-app-border px-5 py-8 sm:px-6 lg:px-8">
   <div class="mx-auto flex ds-max-w-page flex-col items-center justify-between gap-3 text-sm text-app-text-muted sm:flex-row">
-    <p>© {{ currentYear }} Jesús Lobato González</p>
-    <p>Diseñado y desarrollado con Angular, PrimeNG y Tailwind CSS.</p>
+    <p>{{ 'translations.footer.copyright' | translate: { year: currentYear } }}</p>
+    <p>{{ 'translations.footer.built_with' | translate }}</p>
   </div>
 </footer>

@@ -1,19 +1,19 @@
 <div class="mt-10 rounded-[1.75rem] border border-app-border bg-white p-6 sm:p-8">
-  <h3 class="text-2xl font-semibold text-app-heading">Envíame un mensaje</h3>
-  <p class="mt-2 text-sm leading-6 text-app-text-soft">Rellena el formulario y te responderé lo antes posible.</p>
+  <h3 class="text-2xl font-semibold text-app-heading">{{ 'translations.contact.form.title' | translate }}</h3>
+  <p class="mt-2 text-sm leading-6 text-app-text-soft">{{ 'translations.contact.form.subtitle' | translate }}</p>
 
-  @if (status === 'success') {
+  @if (status() === 'success') {
     <div class="mt-6 flex items-start gap-3 rounded-2xl border border-green-200 bg-green-50 px-5 py-4">
       <span class="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-full bg-green-200 text-green-700">
         <i class="pi pi-check text-sm"></i>
       </span>
       <div>
-        <p class="text-sm font-semibold text-green-800">Mensaje enviado correctamente</p>
-        <p class="mt-1 text-sm text-green-700">Gracias por contactarme. Te responderé lo antes posible.</p>
+        <p class="text-sm font-semibold text-green-800">{{ 'translations.contact.form.success.title' | translate }}</p>
+        <p class="mt-1 text-sm text-green-700">{{ 'translations.contact.form.success.description' | translate }}</p>
         <button
           pButton
           type="button"
-          label="Enviar otro mensaje"
+          [label]="'translations.contact.form.success.cta' | translate"
           icon="pi pi-send"
           iconPos="right"
           severity="contrast"
@@ -25,61 +25,70 @@
     </div>
   }
 
-  @if (status === 'error') {
+  @if (status() === 'error') {
     <div class="mt-6 flex items-start gap-3 rounded-2xl border border-red-200 bg-red-50 px-5 py-4">
       <span class="mt-0.5 grid h-7 w-7 shrink-0 place-items-center rounded-full bg-red-200 text-red-700">
         <i class="pi pi-exclamation-triangle text-sm"></i>
       </span>
       <div>
-        <p class="text-sm font-semibold text-red-800">Error al enviar</p>
-        <p class="mt-1 text-sm text-red-700">{{ errorMessage }}</p>
+        <p class="text-sm font-semibold text-red-800">{{ 'translations.contact.form.error.title' | translate }}</p>
+        <p class="mt-1 text-sm text-red-700">
+          @if (errorMessage()) {
+            {{ errorMessage() }}
+          } @else {
+            {{ errorMessageKey() | translate }}
+          }
+        </p>
         <button
           pButton
           type="button"
-          label="Reintentar"
+          [label]="'translations.contact.form.error.retry' | translate"
           icon="pi pi-refresh"
           iconPos="right"
           severity="danger"
           [text]="true"
           [rounded]="true"
           class="mt-2"
-          (click)="status = 'idle'"
+          (click)="resetErrorState()"
         ></button>
       </div>
     </div>
   }
 
-  @if (status !== 'success') {
+  @if (status() !== 'success') {
     <form [formGroup]="form" (ngSubmit)="submit()" class="mt-6 grid gap-5 sm:grid-cols-2">
       <div class="flex flex-col gap-1.5">
-        <label for="name" class="text-sm font-medium text-app-heading">Nombre</label>
-        <input pInputText id="name" formControlName="name" placeholder="Tu nombre" class="w-full" autocomplete="name" />
+        <label for="name" class="text-sm font-medium text-app-heading">{{ 'translations.contact.form.fields.name.label' | translate }}</label>
+        <input pInputText id="name" formControlName="name" [placeholder]="'translations.contact.form.fields.name.placeholder' | translate" class="w-full" autocomplete="name" />
         @if (form.controls.name.touched && form.controls.name.invalid) {
-          <small class="text-red-500">El nombre es obligatorio.</small>
+          <small class="text-red-500">{{ 'translations.contact.form.validation.name_required' | translate }}</small>
         }
       </div>
 
       <div class="flex flex-col gap-1.5">
-        <label for="email" class="text-sm font-medium text-app-heading">Email</label>
-        <input pInputText id="email" type="email" formControlName="email" placeholder="tu@email.com" class="w-full" autocomplete="email" />
+        <label for="email" class="text-sm font-medium text-app-heading">{{ 'translations.contact.form.fields.email.label' | translate }}</label>
+        <input pInputText id="email" type="email" formControlName="email" [placeholder]="'translations.contact.form.fields.email.placeholder' | translate" class="w-full" autocomplete="email" />
         @if (form.controls.email.touched && form.controls.email.invalid) {
           <small class="text-red-500">
-            @if (form.controls.email.errors?.['required']) { El email es obligatorio. }
-            @else if (form.controls.email.errors?.['email']) { Introduce un email válido. }
+            @if (form.controls.email.errors?.['required']) {
+              {{ 'translations.contact.form.validation.email_required' | translate }}
+            } @else if (form.controls.email.errors?.['email']) {
+              {{ 'translations.contact.form.validation.email_invalid' | translate }}
+            }
           </small>
         }
       </div>
 
       <div class="sm:col-span-2 flex flex-col gap-1.5">
-        <label for="subject" class="text-sm font-medium text-app-heading">Asunto</label>
-        <input pInputText id="subject" formControlName="subject" placeholder="¿De qué quieres hablar?" class="w-full" autocomplete="off" />
+        <label for="subject" class="text-sm font-medium text-app-heading">{{ 'translations.contact.form.fields.subject.label' | translate }}</label>
+        <input pInputText id="subject" formControlName="subject" [placeholder]="'translations.contact.form.fields.subject.placeholder' | translate" class="w-full" autocomplete="off" />
       </div>
 
       <div class="sm:col-span-2 flex flex-col gap-1.5">
-        <label for="message" class="text-sm font-medium text-app-heading">Mensaje</label>
-        <textarea pTextarea id="message" formControlName="message" rows="5" placeholder="Escribe tu mensaje aquí..." class="w-full"></textarea>
+        <label for="message" class="text-sm font-medium text-app-heading">{{ 'translations.contact.form.fields.message.label' | translate }}</label>
+        <textarea pTextarea id="message" formControlName="message" rows="5" [placeholder]="'translations.contact.form.fields.message.placeholder' | translate" class="w-full"></textarea>
         @if (form.controls.message.touched && form.controls.message.invalid) {
-          <small class="text-red-500">El mensaje es obligatorio.</small>
+          <small class="text-red-500">{{ 'translations.contact.form.validation.message_required' | translate }}</small>
         }
       </div>
 
@@ -87,10 +96,12 @@
         <button
           pButton
           type="submit"
-          [label]="status === 'sending' ? 'Enviando...' : 'Enviar mensaje'"
+          [label]="status() === 'sending'
+            ? ('translations.contact.form.submit_loading' | translate)
+            : ('translations.contact.form.submit' | translate)"
           icon="pi pi-send"
           iconPos="right"
-          [loading]="status === 'sending'"
+          [loading]="status() === 'sending'"
           [rounded]="true"
           class="w-full sm:w-auto"
         ></button>

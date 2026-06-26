@@ -1,0 +1,209 @@
+{
+  "translations": {
+    "common": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "web": "Web",
+      "android": "Android"
+    },
+    "navbar": {
+      "brand_name": "Jesús Lobato",
+      "about": "Sobre mí",
+      "experience": "Experiencia",
+      "projects": "Proyectos",
+      "technologies": "Tecnologías",
+      "education": "Formación",
+      "contact": "Contacto",
+      "download_cv": "Descargar CV",
+      "language_label": "Idioma",
+      "language_toggle_aria": "Cambiar idioma entre español e inglés",
+      "open_navigation_aria": "Abrir navegación",
+      "close_navigation_aria": "Cerrar navegación"
+    },
+    "hero": {
+      "availability": "Disponible para nuevas oportunidades",
+      "name": "Jesús Lobato González",
+      "subtitle": "Desarrollador de software con foco en Angular, PrimeNG y Android.",
+      "description": "Construyo interfaces modernas, limpias y mantenibles. Me gusta trabajar con una base sólida de diseño y código bien estructurado, cuidando tanto la experiencia visual como la claridad técnica del producto.",
+      "location": "Arahal, Sevilla · España",
+      "cta_projects": "Ver proyectos",
+      "cta_contact": "Contactar",
+      "profile_alt": "Retrato de Jesús Lobato"
+    },
+    "about": {
+      "title": "Sobre mí",
+      "paragraph_1": "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma, orientado al desarrollo de software con foco en aplicaciones web y Android. Mi principal fortaleza es construir soluciones con código limpio, mantenible y fácil de escalar.",
+      "paragraph_2": "Tengo experiencia reciente desarrollando un <span class=\"font-semibold text-app-heading\">ERP desde cero</span> en equipo durante mis prácticas, usando Angular, GitFlow, Scrum y buenas prácticas. Me interesa especialmente el trabajo en equipo y la mejora continua a través de revisiones de código y sistemas de diseño bien planteados.",
+      "cards": {
+        "web": {
+          "title": "Desarrollo web",
+          "description": "Angular, TypeScript, Tailwind CSS y PrimeNG para interfaces modernas y mantenibles."
+        },
+        "mobile": {
+          "title": "Desarrollo móvil",
+          "description": "Aplicaciones Android con Java y Android Studio, cuidando estructura y rendimiento."
+        },
+        "data": {
+          "title": "Bases de datos",
+          "description": "Trabajo con SQL, Oracle, MongoDB y Firebase según las necesidades del producto."
+        },
+        "architecture": {
+          "title": "Arquitectura limpia",
+          "description": "Me interesa que el código sea legible, escalable y fácil de mantener en equipo."
+        }
+      }
+    },
+    "experience": {
+      "title": "Experiencia",
+      "description": "La etapa más reciente en la que he trabajado con Angular, diseño de interfaz y dinámica de equipo real.",
+      "role": "Desarrollador Angular",
+      "period": "Febrero 2026 - Mayo 2026",
+      "location": "Sevilla · Híbrido",
+      "summary": "Participé en un equipo de 4 personas en el desarrollo desde cero de un ERP de gestión empresarial. Trabajamos con metodología Scrum, dailies y planificaciones semanales, usando GitFlow, feature branches y pull requests.",
+      "points": {
+        "frontend": "Desarrollo frontend con Angular moderno y Angular Signals.",
+        "integration": "Integración con Firebase Auth y consumo de APIs mediante repositorios HTTP.",
+        "ui": "Uso de Tailwind CSS y PrimeNG para las interfaces.",
+        "modules": "Trabajo en módulos de clientes, ventas, usuarios, categorías, almacenes y productos.",
+        "architecture": "Aplicación de buenas prácticas y arquitectura limpia."
+      }
+    },
+    "projects": {
+      "title": "Proyectos",
+      "description": "Una selección de proyectos reales construidos durante mi formación y prácticas profesionales.",
+      "erp": {
+        "badge": "Proyecto de prácticas",
+        "title": "ERP de gestión empresarial",
+        "description": "Aplicación web modular para gestión de dashboard, usuarios, departamentos, productos, categorías, clientes, proveedores, compras, ventas y almacenes.",
+        "view_repository": "Ver repositorio",
+        "view_site": "Ver web",
+        "expand_image": "Ampliar imagen del ERP",
+        "gallery": {
+          "login": "Pantalla de acceso del ERP",
+          "dashboard": "Dashboard principal del ERP",
+          "clients": "Módulo de clientes del ERP",
+          "products": "Módulo de productos del ERP",
+          "sales": "Módulo de ventas del ERP",
+          "users": "Módulo de usuarios del ERP"
+        }
+      },
+      "bookhealth": {
+        "badge": "TFG · Web y Android",
+        "description": "Plataforma de citas sanitarias que conecta clientes con profesionales sanitarios privados. Incluye versión web y aplicación Android, con autenticación, roles, perfiles, citas, valoraciones y mapas.",
+        "web_active": "Vista web activa",
+        "android_active": "Vista Android activa",
+        "expand_image": "Ampliar imagen de BookHealth",
+        "private_repositories": "Repositorios privados",
+        "empty": {
+          "title": "Galería BookHealth preparada",
+          "description": "La estructura está lista para mostrar capturas de BookHealth en cuanto añadamos nuevas pantallas al proyecto."
+        },
+        "gallery": {
+          "web_home": "Home de BookHealth web",
+          "web_professionals": "Listado de profesionales en BookHealth web",
+          "web_detail": "Detalle de profesional en BookHealth web",
+          "web_appointments": "Citas del cliente en BookHealth web",
+          "web_dashboard": "Dashboard de profesionales en BookHealth web",
+          "android_home": "Home de BookHealth Android",
+          "android_professionals": "Listado de profesionales en BookHealth Android",
+          "android_detail": "Detalle de profesional en BookHealth Android",
+          "android_map": "Mapa de profesionales en BookHealth Android",
+          "android_appointments": "Mis citas en BookHealth Android"
+        }
+      }
+    },
+    "technologies": {
+      "title": "Tecnologías",
+      "description": "Herramientas y lenguajes con los que trabajo en el día a día, agrupados para reflejar mejor mi stack real.",
+      "categories": {
+        "frontend": "Frontend",
+        "mobile": "Mobile",
+        "data": "Bases de datos",
+        "tools": "Herramientas y metodología",
+        "other": "Otros"
+      }
+    },
+    "education": {
+      "title": "Formación",
+      "description": "Base académica y competencias personales que definen cómo trabajo y cómo afronto proyectos nuevos.",
+      "dam": {
+        "period": "Septiembre 2024 - Junio 2026",
+        "title": "Técnico Superior en Desarrollo de Aplicaciones Multiplataforma",
+        "school": "I.E.S. Profesor Juan Antonio Carrillo Salcedo",
+        "description": "Formación en desarrollo web, móvil, bases de datos, servicios, procesos, diseño de interfaces y desarrollo multiplataforma."
+      },
+      "psychology": {
+        "period": "2019 - 2024",
+        "title": "Grado en Psicología",
+        "school": "Universidad de Sevilla"
+      },
+      "soft_skills": {
+        "title": "Competencias personales",
+        "teamwork": "Trabajo en equipo",
+        "resilience": "Resiliencia",
+        "fast_learning": "Aprendizaje rápido",
+        "organization": "Organización",
+        "responsibility": "Responsabilidad",
+        "communication": "Comunicación",
+        "adaptability": "Adaptabilidad",
+        "work_under_pressure": "Trabajo bajo presión"
+      }
+    },
+    "contact": {
+      "title": "Contacto",
+      "description": "Si tienes una oportunidad, una colaboración o simplemente quieres hablar sobre producto y frontend, estaré encantado de leerte.",
+      "cards": {
+        "email": "Email",
+        "phone": "Teléfono",
+        "location": "Ubicación",
+        "location_value": "Arahal, Sevilla"
+      },
+      "form": {
+        "title": "Envíame un mensaje",
+        "subtitle": "Rellena el formulario y te responderé lo antes posible.",
+        "submit": "Enviar mensaje",
+        "submit_loading": "Enviando...",
+        "fields": {
+          "name": {
+            "label": "Nombre",
+            "placeholder": "Tu nombre"
+          },
+          "email": {
+            "label": "Email",
+            "placeholder": "tu@email.com"
+          },
+          "subject": {
+            "label": "Asunto",
+            "placeholder": "¿De qué quieres hablar?"
+          },
+          "message": {
+            "label": "Mensaje",
+            "placeholder": "Escribe tu mensaje aquí..."
+          }
+        },
+        "validation": {
+          "name_required": "El nombre es obligatorio.",
+          "email_required": "El email es obligatorio.",
+          "email_invalid": "Introduce un email válido.",
+          "message_required": "El mensaje es obligatorio."
+        },
+        "success": {
+          "title": "Mensaje enviado correctamente",
+          "description": "Gracias por contactarme. Te responderé lo antes posible.",
+          "cta": "Enviar otro mensaje"
+        },
+        "error": {
+          "title": "Error al enviar",
+          "retry": "Reintentar",
+          "service_rejected": "El servicio rechazó el envío. Inténtalo de nuevo.",
+          "network": "No se pudo conectar con el servidor. Comprueba tu conexión.",
+          "generic": "Error al enviar el mensaje. Inténtalo de nuevo más tarde."
+        }
+      }
+    },
+    "footer": {
+      "copyright": "© {{year}} Jesús Lobato González",
+      "built_with": "Diseñado y desarrollado con Angular, PrimeNG y Tailwind CSS."
+    }
+  }
+}

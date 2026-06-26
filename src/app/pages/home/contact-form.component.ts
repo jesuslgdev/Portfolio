@@ -1,7 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { HttpErrorResponse } from '@angular/common/http';
-import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal, inject } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { TranslatePipe } from '@ngx-translate/core';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { TextareaModule } from 'primeng/textarea';
@@ -9,7 +10,7 @@ import { ContactService } from '../../shared/data/contact.service';
 
 @Component({
   selector: 'app-contact-form',
-  imports: [CommonModule, ReactiveFormsModule, InputTextModule, TextareaModule, ButtonModule],
+  imports: [CommonModule, ReactiveFormsModule, TranslatePipe, InputTextModule, TextareaModule, ButtonModule],
   templateUrl: './contact-form.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -24,8 +25,9 @@ export class ContactFormComponent {
     message: ['', Validators.required],
   });
 
-  status: 'idle' | 'sending' | 'success' | 'error' = 'idle';
-  errorMessage = '';
+  readonly status = signal<'idle' | 'sending' | 'success' | 'error'>('idle');
+  readonly errorMessage = signal('');
+  readonly errorMessageKey = signal('');
 
   submit(): void {
     if (this.form.invalid) {
@@ -33,30 +35,43 @@ export class ContactFormComponent {
       return;
     }
 
-    this.status = 'sending';
+    this.status.set('sending');
+    this.errorMessage.set('');
+    this.errorMessageKey.set('');
 
     this.contactService.send(this.form.getRawValue()).subscribe({
       next: (res) => {
         if (res.success) {
-          this.status = 'success';
+          this.status.set('success');
           this.form.reset();
         } else {
-          this.status = 'error';
-          this.errorMessage = res.message || 'El servicio rechazó el envío. Inténtalo de nuevo.';
+          this.status.set('error');
+          this.errorMessage.set(res.message || '');
+          this.errorMessageKey.set(
+            res.message ? '' : 'translations.contact.form.error.service_rejected',
+          );
         }
       },
       error: (err: HttpErrorResponse) => {
-        this.status = 'error';
-        this.errorMessage = err.status === 0
-          ? 'No se pudo conectar con el servidor. Comprueba tu conexión.'
-          : 'Error al enviar el mensaje. Inténtalo de nuevo más tarde.';
+        this.status.set('error');
+        this.errorMessage.set('');
+        this.errorMessageKey.set(
+          err.status === 0
+            ? 'translations.contact.form.error.network'
+            : 'translations.contact.form.error.generic',
+        );
       },
     });
   }
 
   resetForm(): void {
-    this.status = 'idle';
-    this.errorMessage = '';
+    this.status.set('idle');
+    this.errorMessage.set('');
+    this.errorMessageKey.set('');
     this.form.reset();
+  }
+
+  resetErrorState(): void {
+    this.status.set('idle');
   }
 }

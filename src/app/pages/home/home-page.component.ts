@@ -116,7 +116,9 @@ export class HomePageComponent {
   );
 
   protected readonly currentBookHealthViewportClass = computed(() =>
-    this.bookHealthPlatform() === 'web' ? 'aspect-[16/9]' : 'aspect-[9/16]',
+    this.bookHealthPlatform() === 'web'
+      ? 'aspect-[16/9]'
+      : 'mx-auto aspect-[9/16] w-full max-w-[20rem]',
   );
 
   protected readonly currentBookHealthNumVisible = computed(() =>

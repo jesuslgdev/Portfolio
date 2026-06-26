@@ -62,3 +62,20 @@ h4 {
   color: #fff !important;
   border-color: #2b221f !important;
 }
+
+/* Galleria fullscreen controls */
+.p-galleria.p-galleria-fullscreen .p-galleria-close-button,
+.p-galleria.p-galleria-fullscreen .p-galleria-prev-button,
+.p-galleria.p-galleria-fullscreen .p-galleria-next-button {
+  background: rgba(37, 28, 23, 0.72) !important;
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.14) !important;
+  backdrop-filter: blur(8px);
+}
+
+.p-galleria.p-galleria-fullscreen .p-galleria-close-button:hover,
+.p-galleria.p-galleria-fullscreen .p-galleria-prev-button:hover,
+.p-galleria.p-galleria-fullscreen .p-galleria-next-button:hover {
+  background: rgba(37, 28, 23, 0.9) !important;
+  color: #fff !important;
+}

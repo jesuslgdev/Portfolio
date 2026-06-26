@@ -225,13 +225,18 @@
                   (activeIndexChange)="handleErpGalleryIndexChange($event)"
                 >
                   <ng-template #item let-item>
-                    <div class="flex aspect-[16/9] items-center justify-center bg-slate-900 px-4 py-4 sm:px-6">
+                    <button
+                      type="button"
+                      class="flex aspect-[16/9] w-full cursor-zoom-in items-center justify-center bg-slate-900 px-4 py-4 text-left sm:px-6"
+                      (click)="openErpFullscreen()"
+                      [attr.aria-label]="'Ampliar imagen: ' + item.alt"
+                    >
                       <img
                         [src]="item.itemImageSrc"
                         [alt]="item.alt"
                         class="block max-h-full w-full rounded-xl border border-white/10 bg-white object-contain shadow-app-lg"
                       />
-                    </div>
+                    </button>
                   </ng-template>
                   <ng-template #thumbnail let-item>
                     <img
@@ -242,6 +247,29 @@
                   </ng-template>
                 </p-galleria>
               </div>
+              <p-galleria
+                [visible]="erpFullscreenVisible"
+                (visibleChange)="erpFullscreenVisible = $event"
+                [value]="erpImages"
+                [activeIndex]="erpActiveIndex"
+                (activeIndexChange)="handleErpGalleryIndexChange($event)"
+                [showThumbnails]="false"
+                [showItemNavigators]="true"
+                [circular]="true"
+                [fullScreen]="true"
+                [showIndicators]="false"
+                [containerStyle]="{ 'max-width': '96vw' }"
+              >
+                <ng-template #item let-item>
+                  <div class="flex h-[84vh] items-center justify-center bg-slate-950 px-4 py-4 sm:h-[88vh] sm:px-8">
+                    <img
+                      [src]="item.itemImageSrc"
+                      [alt]="item.alt"
+                      class="block max-h-full w-auto max-w-[min(96vw,1600px)] rounded-xl border border-white/10 bg-white object-contain shadow-app-lg"
+                    />
+                  </div>
+                </ng-template>
+              </p-galleria>
 
               <div class="mt-5 flex flex-wrap gap-2">
                 <p-chip label="Angular 21"></p-chip>
@@ -336,9 +364,15 @@
                     (activeIndexChange)="handleBookHealthGalleryIndexChange($event)"
                   >
                     <ng-template #item let-item>
-                      <div class="flex items-center justify-center" [ngClass]="[currentBookHealthViewportClass, currentBookHealthGalleryClass]">
+                      <button
+                        type="button"
+                        class="flex w-full cursor-zoom-in items-center justify-center text-left"
+                        [ngClass]="[currentBookHealthViewportClass, currentBookHealthGalleryClass]"
+                        (click)="openBookHealthFullscreen()"
+                        [attr.aria-label]="'Ampliar imagen: ' + item.alt"
+                      >
                         <img [src]="item.itemImageSrc" [alt]="item.alt" [class]="currentBookHealthImageClass" />
-                      </div>
+                      </button>
                     </ng-template>
                     <ng-template #thumbnail let-item>
                       <img [src]="item.thumbnailImageSrc" [alt]="item.alt" [class]="currentBookHealthThumbnailClass" />
@@ -360,6 +394,31 @@
                   </div>
                 </ng-template>
               </div>
+              <p-galleria
+                [visible]="bookHealthFullscreenVisible"
+                (visibleChange)="bookHealthFullscreenVisible = $event"
+                [value]="currentBookHealthImages"
+                [activeIndex]="bookHealthActiveIndex"
+                (activeIndexChange)="handleBookHealthGalleryIndexChange($event)"
+                [showThumbnails]="false"
+                [showItemNavigators]="true"
+                [circular]="true"
+                [fullScreen]="true"
+                [showIndicators]="false"
+                [containerStyle]="{ 'max-width': '96vw' }"
+              >
+                <ng-template #item let-item>
+                  <div class="flex h-[84vh] items-center justify-center px-4 py-4 sm:h-[88vh] sm:px-8" [ngClass]="currentBookHealthGalleryClass">
+                    <img
+                      [src]="item.itemImageSrc"
+                      [alt]="item.alt"
+                      [class]="bookHealthPlatform === 'web'
+                        ? 'block max-h-full w-auto max-w-[min(96vw,1600px)] rounded-xl border border-white/10 bg-white object-contain shadow-app-lg'
+                        : 'block max-h-full w-auto max-w-[min(92vw,520px)] rounded-[1.75rem] border border-white/10 bg-white object-contain shadow-app-lg'"
+                    />
+                  </div>
+                </ng-template>
+              </p-galleria>
 
               <div class="mt-5 flex flex-wrap gap-2">
                 <p-chip *ngFor="let tech of currentBookHealthStack" [label]="tech"></p-chip>

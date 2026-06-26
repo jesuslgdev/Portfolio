@@ -26,8 +26,10 @@ type BookHealthPlatform = 'web' | 'android';
 })
 export class HomePageComponent {
   protected erpActiveIndex = 0;
+  protected erpFullscreenVisible = false;
   protected bookHealthPlatform: BookHealthPlatform = 'web';
   protected bookHealthActiveIndex = 0;
+  protected bookHealthFullscreenVisible = false;
 
   protected readonly erpImages: GalleryImage[] = [
     { itemImageSrc: 'projects/erp/login_erp.png', thumbnailImageSrc: 'projects/erp/login_erp.png', alt: 'Pantalla de login del ERP' },
@@ -103,6 +105,10 @@ export class HomePageComponent {
     this.erpActiveIndex = index;
   }
 
+  protected openErpFullscreen(): void {
+    this.erpFullscreenVisible = true;
+  }
+
   protected setBookHealthPlatform(platform: BookHealthPlatform): void {
     if (this.bookHealthPlatform === platform) {
       return;
@@ -110,9 +116,18 @@ export class HomePageComponent {
 
     this.bookHealthPlatform = platform;
     this.bookHealthActiveIndex = 0;
+    this.bookHealthFullscreenVisible = false;
   }
 
   protected handleBookHealthGalleryIndexChange(index: number): void {
     this.bookHealthActiveIndex = index;
+  }
+
+  protected openBookHealthFullscreen(): void {
+    if (!this.bookHealthHasImages) {
+      return;
+    }
+
+    this.bookHealthFullscreenVisible = true;
   }
 }

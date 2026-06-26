@@ -14,6 +14,7 @@ import {
   MissingTranslationHandlerImpl,
   resolveInitialLanguage,
   supportedLanguages,
+  translateHttpLoaderConfig,
 } from './lang/translation.config';
 import { PortfolioPreset } from '../theme/portfolio.preset';
 
@@ -44,8 +45,8 @@ export const appConfig: ApplicationConfig = {
     },
     ...provideTranslateService({
       loader: provideTranslateHttpLoader({
-        prefix: '/assets/i18n/strings-',
-        suffix: '.json',
+        prefix: translateHttpLoaderConfig.prefix,
+        suffix: translateHttpLoaderConfig.suffix,
       }),
       fallbackLang: defaultLanguage,
       missingTranslationHandler: provideMissingTranslationHandler(MissingTranslationHandlerImpl),
